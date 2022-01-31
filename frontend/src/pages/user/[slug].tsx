@@ -36,7 +36,7 @@ export default function User() {
         }
 
         const fetchSomethingById = async () => {
-            await api.get(`payments/1`)
+            await api.get(`payments/${slug}`)
                 .then(response => setGrids(response.data))
         }
 
