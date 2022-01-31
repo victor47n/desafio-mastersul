@@ -3,8 +3,10 @@ using System.Collections.Generic;
 
 namespace LogicaDeProgramacaoFrontEndWebEClasses.Interfaces
 {
-    public interface IPaymentRepository
+    public interface IUserRepository
     {
-        public List<Grid> GetPaymentsByUser(List<Grid> grids);
+        public List<User> Get();
+
+        public User GetUserById(int id);        
     }
 }

@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #EFEFF1;
+  
+    --dark-50: ##EFEFF1;
+    --dark-100: #ADADB8;
+    --dark-200: #464649;
+    --dark-500: #272728;
+    --dark-800: #18181B;
+    --dark-900: #0E0E10;
+
+    --danger: #FF4444;
+
+    --background: var(--dark-900);
+    --background-secondary: var(--dark-800);
+
+    --border-gray: var(--dark-500);
+    --border-purple: var(--dark-200);
+
+    --text-primary: var(--dark-50);
+    --text-secondary: var(--dark-100);
+
+    --scrollbar-background: var(--dark-900);
+    --scrollbar: var(--dark-800);
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%; // 15px
+    }
+}
+
+@media (max-width: 1366px) {
+    html {
+      font-size: 80%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 87.5%; // 14xp
+    }
+}
+
+body {
+    background: var(--background);    
+}
+
+body, input, textarea, button {
+    font: 500 1rem Inter, sans-serif;
+    color: var(--text-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    font-family: Lexend, sans-serif;
+    color: var(--text-primary);
+}
+
+h1 {
+    font: size 2rem;
+}
+
+h2 {
+    font: size 1.5rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.react-modal-content {
+    width: 100%;
+    max-width: 576px;
+    background-color: var(--background);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.24rem;
+}
+.react-modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: 0;
+    background: transparent;
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+}

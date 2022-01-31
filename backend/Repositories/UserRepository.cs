@@ -35,5 +35,35 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Repositories
 
             return users;
         }
+
+        public User GetUserById(int id)
+        {
+            var xls = new XLWorkbook(@"Database\tables.xlsx");
+            var woorksheet = xls.Worksheets.First(w => w.Name == "users");
+            var totalLines = woorksheet.Rows().Count();
+
+            var user = new User();
+
+            // A primeira linha representa o cabeçalho
+            for (int count = 2; count <= totalLines; count++)
+            {
+                int idRow = int.Parse(woorksheet.Cell($"A{count}").Value.ToString());
+                if (id == idRow)
+                {
+                    user.Grids = new();
+
+                    user.Id = idRow;
+                    user.Name = woorksheet.Cell($"B{count}").Value.ToString();
+
+                    user.Grids.Add(new Grid() { Type = woorksheet.Cell($"C{count}").Value.ToString() });
+                    user.Grids.Add(new Grid() { Type = woorksheet.Cell($"D{count}").Value.ToString() });
+                    user.Grids.Add(new Grid() { Type = woorksheet.Cell($"E{count}").Value.ToString() });
+
+                    break;
+                }
+            }
+
+            return user;
+        }
     }
 }

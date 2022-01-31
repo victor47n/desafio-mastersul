@@ -10,16 +10,19 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Controllers
     public class PaymentController : ControllerBase
     {
         protected IPaymentRepository PaymentRepository;
+        protected IUserRepository UserRepository;
 
-        public PaymentController(IPaymentRepository paymentRepository)
+        public PaymentController(IPaymentRepository paymentRepository, IUserRepository userRepository)
         {
             PaymentRepository = paymentRepository;
+            UserRepository = userRepository;
         }
 
-        [HttpGet]
-        public ActionResult<Grid> GetPaymentsByUser([FromBody] List<Grid> grids)
+        [HttpGet("{id}")]
+        public ActionResult<List<Grid>> GetPaymentsByUserId([FromRoute] int id)
         {
-            grids = PaymentRepository.GetPaymentsByUser(grids);
+            User user = UserRepository.GetUserById(id);
+            List<Grid> grids = PaymentRepository.GetPaymentsByUser(user.Grids);
 
             return grids == null ? NotFound() : Ok(grids);
         }
