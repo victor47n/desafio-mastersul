@@ -11,6 +11,7 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            // Definindo o cors para que requisições de qualquer dominio sejam aceitas
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(
@@ -20,7 +21,12 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses
                     });
             });
 
+            // Necessário para trabalhar com controllers
             services.AddControllers();
+
+            // Adicionado a injeção de dependencia dos repositórios
+            // com o tempo de vida em escopo, ou seja, o mesmo é 
+            // definido uma única vez por solicitação
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPaymentRepository, PaymentRepository>();
         }
@@ -34,6 +40,7 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses
 
             app.UseRouting();
 
+            // Utilizando Cors
             app.UseCors();
 
             app.UseEndpoints(endpoints =>

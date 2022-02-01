@@ -18,6 +18,12 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Controllers
             UserRepository = userRepository;
         }
 
+        /// <summary>
+        /// Método responsável por buscar as informações dos grid a partir 
+        /// do id do usuário
+        /// </summary>
+        /// <param name="id">Identificação do usuário</param>
+        /// <returns><see cref="List{Grid}"/></returns>
         [HttpGet("{id}")]
         public ActionResult<List<Grid>> GetPaymentsByUserId([FromRoute] int id)
         {

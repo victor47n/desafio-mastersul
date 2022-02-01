@@ -10,7 +10,11 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Repositories
     {
         public List<User> Get()
         {
+            // Definindo qual arquivo vai ser aberto.
+            // O arquivo deve permanecer fechado para que ele possa
+            // ser utilizado pela aplicação.
             var xls = new XLWorkbook(@"Database\tables.xlsx");
+            // Seleciona a aba que será utilizada no arquivo
             var woorksheet = xls.Worksheets.First(w => w.Name == "users");
             var totalLines = woorksheet.Rows().Count();
 
@@ -39,6 +43,7 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Repositories
         public User GetUserById(int id)
         {
             var xls = new XLWorkbook(@"Database\tables.xlsx");
+            // Seleciona a aba que será utilizada no arquivo
             var woorksheet = xls.Worksheets.First(w => w.Name == "users");
             var totalLines = woorksheet.Rows().Count();
 
