@@ -7,6 +7,7 @@ import { api } from '../../services/api';
 import styles from './user.module.scss';
 import { PaymentModal } from '../../components/PaymentModal';
 import Modal from 'react-modal';
+import Link from 'next/link';
 
 Modal.setAppElement('#root');
 
@@ -87,6 +88,12 @@ export default function User() {
             <Head>
                 <title>Teste | Desafio Mastersul</title>
             </Head>
+
+            <button type="button" className={styles.backButton}>
+                <Link href={`/`}>
+                    <img src="/arrow_left.svg" alt="Voltar" />
+                </Link>
+            </button>
 
             <div className={styles.grid}>
                 {grids.map(grid => (
