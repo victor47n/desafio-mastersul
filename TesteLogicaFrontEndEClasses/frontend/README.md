@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Frontend" />
+  <img src="public/demo.gif" alt="Frontend" />
 
   &#xa0;
 
@@ -29,7 +29,7 @@
   <a href="#sparkles-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requisitos">Requisitos</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-instalacao">Instação</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-instalacao">Instalação</a> &#xa0; | &#xa0;
   <a href="https://github.com/victor47n" target="_blank">Autor</a>
 </p>
 
