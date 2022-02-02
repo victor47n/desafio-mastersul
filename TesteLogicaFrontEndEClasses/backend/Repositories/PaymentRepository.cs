@@ -8,6 +8,13 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Repositories
 {
     public class PaymentRepository : IPaymentRepository
     {
+        /// <summary>
+        /// Método responsável por buscar as informações dos grid a partir 
+        /// dos tipos passados por parâmetro.
+        /// </summary>
+        /// <remarks>O arquivo <see langword=".xlsx"/> dever estar fechado.</remarks>
+        /// <param name="grid">Uma lista contendo os tipos dos grids</param>
+        /// <returns><see cref="List{Grid}"/></returns>
         public List<Grid> GetPaymentsByUser(List<Grid> grids)
         {
             // Definindo qual arquivo vai ser aberto.

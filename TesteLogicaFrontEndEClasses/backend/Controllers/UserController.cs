@@ -16,8 +16,12 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Controllers
             UserRepository = userRepository;
         }
 
+        /// <summary>
+        /// Método responsável por buscar as informações dos usuários
+        /// </summary>
+        /// <returns><see cref="List{User}"/></returns>
         [HttpGet]
-        public ActionResult<IEnumerable<User>> Get()
+        public ActionResult<List<User>> Get()
         {
             var users = UserRepository.Get();
 

@@ -8,6 +8,12 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Repositories
 {
     public class UserRepository : IUserRepository
     {
+        /// <summary>
+        /// Método responsável por consumir as informações de um arquivo xlsx
+        /// e retornar as informações de todos os usuários do arquivo
+        /// </summary>
+        /// <remarks>O arquivo <see langword=".xlsx"/> dever estar fechado.</remarks>
+        /// <returns><see cref="List{User}"/></returns>
         public List<User> Get()
         {
             // Definindo qual arquivo vai ser aberto.
@@ -40,6 +46,14 @@ namespace LogicaDeProgramacaoFrontEndWebEClasses.Repositories
             return users;
         }
 
+        /// <summary>
+        /// Método responsável por consumir as informações de um arquivo xlsx
+        /// e retornar as informações de um usuário
+        /// do id do usuário
+        /// </summary>
+        /// <remarks>O arquivo <see langword=".xlsx"/> dever estar fechado.</remarks>
+        /// <param name="id">Identificação do usuário</param>
+        /// <returns><see cref="User"/></returns>
         public User GetUserById(int id)
         {
             var xls = new XLWorkbook(@"Database\tables.xlsx");
