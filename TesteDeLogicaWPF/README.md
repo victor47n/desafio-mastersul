@@ -1,4 +1,4 @@
-<h1 align="center">Backend</h1>
+<h1 align="center">Teste de lógica</h1>
 
 <p align="center">
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
@@ -17,8 +17,7 @@ Teste lógico proposto pela [Mastersul](https://mastersul.com.br/), utilizando [
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Consumo de informações em arquivos do tipo .xlsx;\
-:heavy_check_mark: Disponibilização de dados;
+:heavy_check_mark: Ao inserir os valos dos sensores de 1 a 4 retornar se deve ser ativado a válvula ou a bomba;\
 
 ## :rocket: Tecnologias ##
 
