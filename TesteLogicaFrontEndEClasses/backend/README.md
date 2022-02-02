@@ -31,7 +31,7 @@ As seguintes ferramentas foram utilizadas neste projeto:
 
 ## :white_check_mark: Requisitos ##
 
-Antes de começar :checkered_flag:, você precisa ter [Git](https://git-scm.com) instalado.
+Antes de começar :checkered_flag:, você precisa ter [Git](https://git-scm.com) e [.NET 5](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) instalados.
 
 ## :checkered_flag: Instalação ##
 
