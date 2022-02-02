@@ -18,8 +18,8 @@ em excel e disponibilizar seu dados através de uma API.
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Consumo de informações em arquivos do tipo .xlsx;\
-:heavy_check_mark: Disponibilização de dados;\
+:heavy_check_mark: Consumo de informações em arquivos do tipo .xlsx;
+:heavy_check_mark: Disponibilização de dados;
 
 ## :rocket: Tecnologias ##
 
