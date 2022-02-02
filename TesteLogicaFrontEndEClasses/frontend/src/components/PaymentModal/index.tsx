@@ -8,6 +8,7 @@ type Payment = {
     value: number;
 }
 
+// Tipagagem do componente
 type PaymentModalProps = {
     isOpen: boolean;
     onRequestClose: () => void;

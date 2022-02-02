@@ -9,6 +9,7 @@ import { PaymentModal } from '../../components/PaymentModal';
 import Modal from 'react-modal';
 import Link from 'next/link';
 
+// Setando o elemento root aonde o Modal deve ser construido
 Modal.setAppElement('#root');
 
 type Payment = {
@@ -31,23 +32,22 @@ export default function User() {
 
     const [grids, setGrids] = useState<Grid[]>([])
 
+    // Será chamado na primeira vez que é executada a página
+    // e toda vez que a constant slug ser modificada
     useEffect(() => {
         if (!slug) {
             return;
         }
 
-        const fetchSomethingById = async () => {
+        const fetchPaymentByUserId = async () => {
             await api.get(`payments/${slug}`)
                 .then(response => setGrids(response.data))
         }
 
-        fetchSomethingById()
+        fetchPaymentByUserId()
     }, [slug])
 
-    useEffect(() => {
-
-    }, []);
-
+    // Recebe um pagamento e abre o modal
     function handleOpenPaymentModal(payment: Payment) {
         setPayment({
             id: payment.id,
@@ -58,15 +58,22 @@ export default function User() {
         setIsPaymentModalOpen(true);
     }
 
+    // Fecha o modal
     function handleClosePaymentModal() {
         setIsPaymentModalOpen(false);
     }
 
+    // Responsável por remover um pagamento de um grid
+    // especifico
     function removePayment(id: number) {
         try {
             const updatedGrids = [...grids];
+            // Busca o index do grid que conter o id do pagamento
             const gridIndex = updatedGrids.findIndex(grid => grid.payments.find(payment => payment.id === id));
 
+            // Se obtiver um index ele utilizara o mesmo
+            // para que possa remover corretamente o pagamento
+            // que foi passado por parâmetro
             if (gridIndex >= 0) {
                 updatedGrids[gridIndex].payments.splice(
                     updatedGrids[gridIndex].payments.findIndex(payment => payment.id === id),
@@ -77,7 +84,6 @@ export default function User() {
             } else {
                 throw Error();
             }
-
         } catch {
             alert('Erro na remoção da conta');
         }

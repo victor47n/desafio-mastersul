@@ -64,6 +64,8 @@ export default function Home({ users }: HomeProps) {
   )
 }
 
+// As informações são executadas no lado do servido e não do navegador,
+// tendo assim as informações já pré-renderizadas pelo Next.js
 export const getServerSideProps: GetServerSideProps = async () => {
   const { data } = await api.get('/users');
 
@@ -79,6 +81,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       users
     },
-    //   revalidate: 60 * 2,
   }
 }
