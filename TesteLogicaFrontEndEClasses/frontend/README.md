@@ -9,22 +9,6 @@
 <h1 align="center">Frontend</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/victor47n/desafio-mastersul?color=56BEB8">
-
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/victor47n/desafio-mastersul?color=56BEB8">
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/victor47n/desafio-mastersul?color=56BEB8">
-</p>
-
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  Frontend 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
-
-<p align="center">
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#sparkles-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
@@ -42,15 +26,15 @@ e manipular os dados recebidos.
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Consumo de API;\
+:heavy_check_mark: Manipulação de dados;\
 
 ## :rocket: Tecnologias ##
 
 As seguintes ferramentas foram utilizadas neste projeto:
 
 - [React](https://pt-br.reactjs.org/)
+- [NextJS](https://nextjs.org/)
 - [Axios](https://github.com/axios/axios)
 - [Date-fns](https://date-fns.org)
 - [Sass](https://sass-lang.com/)
