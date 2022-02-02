@@ -26,7 +26,7 @@ e manipular os dados recebidos.
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Consumo de API;
+:heavy_check_mark: Consumo de API;\
 :heavy_check_mark: Manipulação de dados;
 
 ## :rocket: Tecnologias ##
