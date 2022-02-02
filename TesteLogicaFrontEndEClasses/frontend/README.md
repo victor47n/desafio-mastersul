@@ -25,9 +25,9 @@
 <hr> -->
 
 <p align="center">
-  <a href="#dart-about">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
   <a href="#sparkles-features">Funcionalidades</a> &#xa0; | &#xa0;
-  <a href="#rocket-technologies">TEcnologias</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-requirements">Requisitos</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Começando</a> &#xa0; | &#xa0;
   <a href="https://github.com/victor47n" target="_blank">Autor</a>
@@ -81,7 +81,7 @@ $ yarn start
 ```
 ## :memo: Autor ##
 
-Feito com :heart: por <a href="https://github.com/victor47n" target="_blank">{{Victor Hugo da Silva}}</a>
+Feito com :heart: por <a href="https://github.com/victor47n" target="_blank">Victor Hugo da Silva</a>
 
 &#xa0;
 
