@@ -25,7 +25,7 @@ em excel e disponibilizar seu dados através de uma API.
 
 As seguintes ferramentas foram utilizadas neste projeto:
 
-- [C#]
+- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
 - [.NET](https://dotnet.microsoft.com/)
 - [ClosedXLM](https://github.com/ClosedXML/ClosedXML)
 
