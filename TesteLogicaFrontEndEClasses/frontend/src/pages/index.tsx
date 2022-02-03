@@ -34,14 +34,14 @@ export default function Home({ users }: HomeProps) {
         <title>Inicio | Desafio Mastersul</title>
       </Head>
 
-      <section className={styles.latestEpisodes}>
-        <h2>Últimos lançamentos</h2>
+      <section className={styles.users}>
+        <h2>Usuários</h2>
 
         <ul>
           {users.map((user, index) => {
             return (
               <li key={user.id}>
-                <div className={styles.episodeDetails}>
+                <div className={styles.usersCard}>
                   <p>{user.name}</p>
                   <div className={styles.grids}>
                     {user.grids.map((grid, index) => {
